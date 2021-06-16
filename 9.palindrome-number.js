@@ -10,6 +10,18 @@
  * @return {boolean}
  */
 var isPalindrome = function(x) {
+  if (x < 0) {
+    return false
+  }
 
+  let num = 0, y = 0
+  let pre = x;
+  while(pre) {
+    num = pre % 10
+    y = y * 10 + num 
+    pre = (pre - num) / 10
+  }
+
+  return x === y
 };
 // @lc code=end
